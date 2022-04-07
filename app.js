@@ -53,8 +53,19 @@
 
 
 //button testing from documentation
-const button = document.querySelector('button');
+// const button = document.querySelector('button');
 
-button.addEventListener('click', event => {
-    button.textContent = `Click count: ${event.detail}`
-})
+// button.addEventListener('click', event => {
+//     button.textContent = `Click count: ${event.detail}`
+// })
+
+//button testing retry
+const clickButton = document.getElementById('answer-one');
+
+// clickButton.addEventListener('click', selected)
+
+function selected () {
+    console.log('You did it!')
+};
+
+clickButton.addEventListener('click', selected);
