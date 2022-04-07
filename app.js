@@ -50,3 +50,11 @@
 //     - When 'See Score' button is selected, naviage to results page
 //     - (Implement stretch feature if have time)
 //     - Reloading page resets questions
+
+
+//button testing from documentation
+const button = document.querySelector('button');
+
+button.addEventListener('click', event => {
+    button.textContent = `Click count: ${event.detail}`
+})
