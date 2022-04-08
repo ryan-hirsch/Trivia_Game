@@ -1,8 +1,13 @@
-April 8, 2022
+FRIDAY, APRIL 8, 2022
+--------------------
 
-ATTEMPTING AT MAKING BUTTON RESPOND
+********************
+Goal: Make button have a response when clicked
+Problem(s): Uncaught TypeError
+Status: Resolved
+********************
 
-First atttempt:
+Problem code:
 
 const nextButton = document.getElementById('next-button');
 
@@ -12,7 +17,8 @@ function nextClicked() {
     console.log('You did it!')
 };
 
--- Got error: Uncaught TypeError: Cannot read properties of null (reading 'addEventListener')
+Uncaught TypeError: Cannot read properties of null (reading 'addEventListener')
+
 
 Troubleshooting:
 First things I found when trying to figure out why I was getting this error, was that
@@ -23,3 +29,65 @@ I was looking at the error again and it was saying that the properties were null
 There are clearly properties in the function in the app.js so why would it say it as null?
 
 So, then I started thinking about how the html/css/js interact when loading this site.
+I was thinking that if I just had a app.js file and running something simple like:
+console.log('Hello')
+this would just run when the script was ran.
+
+Since running the app.js in VSCode was just calling that specific script, I realized
+opening my browser that has my html/css/js connected, it was running all those files
+when the page is loaded.
+
+This would make sense of why I'm getting a null for properties in my addEventListener
+
+When the page loads, all three are running at the same time-ish so my js script
+doesn't get a chance to read my HTML and just runs through the script then comes back
+as null because the html hasn't been passed in yet.
+
+So, then I went searching for how to let the html/css load before running the js script.
+
+I didn't understand what I was finding through google searches enough to implement them
+
+This made me go back through my lecture notes and see if this was mentioned anywhere.
+I found in my notes from week one that 'defer' was added to the <script> in the HTML
+broilerplate.
+
+I added this to my HTML file and reloaded the page and the js script ran perfectly!
+
+
+
+
+********************
+Goal: Rebuild index.html
+Problem(s): 
+Status: Resolved
+********************
+
+I made the mistake of deleting my index.html structure in order to isolate my specific
+html I was trying to use in my js script from above. Now need to rebuild.
+
+<body>
+    <h1>Can It Be More Trivial??</h1>
+    <div class = "question-box">
+        <div id="question">Question</div>
+    </div>
+    <div class="answer-buttons">
+        <button id="answer-one">Answer 1</button>
+        <button id="answer-two">Answer 2</button>
+        <button id="answer-three">Answer 3</button>
+        <button id="answer-four">Answer 4</button>
+    </div>
+    <div class="nav-buttons">
+        <button id="next-button">Next</button>
+        <button id="finish-button">Finish</button>
+    </div>
+</body>
+
+
+
+
+********************
+Goal: 
+Problem(s): 
+Status: 
+********************
+
