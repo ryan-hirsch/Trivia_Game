@@ -86,8 +86,81 @@ html I was trying to use in my js script from above. Now need to rebuild.
 
 
 ********************
-Goal: 
+Goal: Make question/answer arrays in app.js
 Problem(s): 
 Status: 
 ********************
 
+const inventory = [
+    {question: 'What is 1 + 1?', answers: [{'2', true}, {'5', false}, {'1', false}, {'3', false}]},
+    {question: 'What is 2 + 3?', answers: [{'4', false}, {'7', false}, {'9', false}, {'5', true}]},
+    {question: 'What is 8 - 1?', answers: [{'6', false}, {'9', false}, {'7', true}, {'2', false}]},
+    {question: 'What is 2 * 6?', answers: [{'8', false}, {'12', true}, {'4', false}, {'-4', false}]},
+];
+
+const randomQuestion = inventory.sort(() => Math.random())
+
+
+Excpected a random question to populate the browser page but instead got error:
+Uncaught SyntaxError: Unexpected string
+
+Looked back at app.js file and there are red marks under the ','s after my answer and at the '}' after the true/false
+
+Not sure what to do at this point. Going to continue researching.
+
+-----
+
+Looking back at Avengers HW, found syntax:
+{ website: 'Gossipcop.com', what: {
+    offering: 'creamed corn', location: 'dark'
+}
+}
+
+-----
+
+const inventory = [
+    {
+        question: 'What is 1 + 1?',
+        answers: [
+            {choice: '2', boolean: true},
+            {choice: '3', boolean: false},
+            {choice: '5', boolean: false},
+            {choice: '4', booelan: true}
+        ]
+    },
+    {
+        question: 'What is 3 + 5?',
+        answers: [
+            {choice: '2', boolean: false},
+            {choice: '7', boolean: false},
+            {choice: '8', boolean: true},
+            {choice: '-2', booelan: false}
+        ]
+    },
+    {
+        question: 'What is 3 + 1?',
+        answers: [
+            {choice: '6', boolean: false},
+            {choice: '4', boolean: true},
+            {choice: '2', boolean: false},
+            {choice: '5', booelan: false}
+        ]
+    },
+    {
+        question: 'What is 2 * 6?',
+        answers: [
+            {choice: '-4', boolean: false},
+            {choice: '8', boolean: false},
+            {choice: '4', boolean: false},
+            {choice: '12', booelan: true}
+        ]
+    }
+];
+
+
+const randomQuestion = inventory.sort(() => Math.random())
+
+
+Again, expected a random question to populate but it did not. However,
+there was no error this time making me think that the array is okay but I'm missing some
+sort of event to make it toggle like my next button is doing.
