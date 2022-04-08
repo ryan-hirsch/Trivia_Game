@@ -164,3 +164,59 @@ const randomQuestion = inventory.sort(() => Math.random())
 Again, expected a random question to populate but it did not. However,
 there was no error this time making me think that the array is okay but I'm missing some
 sort of event to make it toggle like my next button is doing.
+
+Thinking through my next button code snippet:
+
+    const nextButton = document.getElementById('next-button');
+    
+        -- this is letting me access this element in my HTML and putting it into a variable nextButton
+
+    nextButton.addEventListener('click', nextClicked);
+        -- This is letting me add a DOM event (addEventListener) to my variable therefore my HTML element
+            saying the event is a 'click' and when it's clicked, it'll run the function nextClicked
+
+    function nextClicked() {
+        console.log('You did it!')
+    };
+        -- This function will log 'You did it' when called
+
+
+I'm not quite sure how to make it come up with a question in my array at this point but maybe if I attach
+the inventory array to my nextClicked() function, it'll toggle through my inventory array
+
+Going to take away the random feature for the time being to just get through this basic iteration
+
+------
+
+const nextButton = document.getElementById('next-button');
+
+const questionAccess = document.getElementById('question');
+
+const answerAccess = document.getElementById('answer-buttons');
+
+nextButton.addEventListener('click', nextClicked);
+
+function nextClicked() {
+    console.log('You did it!')
+    displayQuestions()
+ };
+
+function displayQuestions() {
+    questionAccess.innerText = inventory
+}
+
+Okay, so, I went ahead and made variables to assign my elements to so I can access them.
+
+I found in the notion notes that innerText will replace the text I have in my HTML file for that element I called
+
+So, I made a function that would take my question element and replace it with my inventory array and it would
+be changing everytime I click next
+
+When the page is loaded, it shows the 'Question' text that is in my HTML file, and when I click the next button,
+it changes. However, it's not reading the array and just showing:
+[object Object], [object Object], [object Object], [object Object]
+
+This makes me think that my innerText syntax is wrong.
+
+-----
+

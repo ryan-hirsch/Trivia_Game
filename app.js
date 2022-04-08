@@ -1,9 +1,18 @@
 const nextButton = document.getElementById('next-button');
 
+const questionAccess = document.getElementById('question');
+
+const answerAccess = document.getElementById('answer-buttons');
+
 nextButton.addEventListener('click', nextClicked);
 
 function nextClicked() {
     console.log('You did it!')
+    displayQuestions(inventory)
+ };
+
+function displayQuestions(inventory) {
+    questionAccess.innerText = inventory
 };
 
 
@@ -46,7 +55,3 @@ const inventory = [
         ]
     }
 ];
-
-
-const randomQuestion = inventory.sort(() => Math.random())
-
