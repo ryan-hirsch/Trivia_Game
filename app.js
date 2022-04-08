@@ -59,13 +59,14 @@
 //     button.textContent = `Click count: ${event.detail}`
 // })
 
+
+
 //button testing retry
-const clickButton = document.getElementById('answer-one');
 
-// clickButton.addEventListener('click', selected)
+const nextButton = document.getElementById('next-button');
 
-function selected () {
+nextButton.addEventListener('click', nextClicked);
+
+function nextClicked() {
     console.log('You did it!')
 };
-
-clickButton.addEventListener('click', selected);

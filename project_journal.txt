@@ -1,0 +1,25 @@
+April 8, 2022
+
+ATTEMPTING AT MAKING BUTTON RESPOND
+
+First atttempt:
+
+const nextButton = document.getElementById('next-button');
+
+nextButton.addEventListener('click', nextClicked);
+
+function nextClicked() {
+    console.log('You did it!')
+};
+
+-- Got error: Uncaught TypeError: Cannot read properties of null (reading 'addEventListener')
+
+Troubleshooting:
+First things I found when trying to figure out why I was getting this error, was that
+the addEventListener was being called on a jQuery object. Didn't know what this meant
+but copied their syntax with my specific things and still didn't work.
+
+I was looking at the error again and it was saying that the properties were null.
+There are clearly properties in the function in the app.js so why would it say it as null?
+
+So, then I started thinking about how the html/css/js interact when loading this site.
