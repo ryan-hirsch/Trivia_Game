@@ -2,19 +2,27 @@ const nextButton = document.getElementById('next-button');
 
 const questionAccess = document.getElementById('question');
 
-const answerAccess = document.getElementById('answer-buttons');
+const answerAccess = document.getElementById('answer-style');
+
+const individualAnswers = document.getElementsByClassName('answer-button');
 
 nextButton.addEventListener('click', nextClicked);
 
+let i = 0
+
 function nextClicked() {
     console.log('You did it!')
-    displayQuestions(inventory)
+    //displayQuestions(inventory)
+    displayAnswer(inventory)
  };
 
-function displayQuestions(inventory) {
-    questionAccess.innerText = inventory
-};
+// function displayQuestions(inventory) {
+//     questionAccess.innerText = inventory[i++].question
+// };
 
+function displayAnswer(inventory) {
+    individualAnswers.innerText = inventory[i++].answers.choice
+};
 
 
 const inventory = [
@@ -24,7 +32,7 @@ const inventory = [
             {choice: '2', boolean: true},
             {choice: '3', boolean: false},
             {choice: '5', boolean: false},
-            {choice: '4', booelan: true}
+            {choice: '4', booelan: false}
         ]
     },
     {
