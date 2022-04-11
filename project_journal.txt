@@ -239,3 +239,44 @@ Problem(s):
 Status: Resolved
 ********************
 
+EOD Friday had:
+
+function nextClicked() {
+    console.log('You did it!')
+    displayQuestions(inventory)
+    //displayAnswers(inventory)
+ };
+
+function displayQuestions(inventory) {
+    questionAccess.innerText = inventory
+};
+
+Thinking would need a for loop. Knew this syntax wasn't correct but didn't know how to troubleshoot
+without a for loop.
+
+Spoke with Josh (SEI Instructor) Monday morning and went over logic. He talked me through it in psuedocode
+and after speaking, was able to come up with this (below) code after about 10 minutes:
+
+let i = 0
+
+function nextClicked() {
+    console.log('You did it!')
+    displayQuestions(inventory)
+ };
+
+function displayQuestions(inventory) {
+    questionAccess.innerText = inventory[i++].question
+};
+
+This code block worked to iterate through the questions array and replace that div text
+with the list of questions as 'next' was clicked
+
+
+
+
+********************
+Goal: Get answer choices to fill answer 1, answer 2... etc buttons with corresponding questions 
+Problem(s): 
+Status: 
+********************
+
