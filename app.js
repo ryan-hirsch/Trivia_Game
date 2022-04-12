@@ -45,26 +45,36 @@ const questionElement = document.getElementsByClassName('question');
 const answerButton = document.getElementsByClassName('answer-button');
 
 
-//answerButton[0].addEventListener('click', answersCorrect);
-
 nextButton[0].addEventListener('click', nextClicked);
 
 
 let i = -1
-let j = 0
+
 
 function nextClicked() {
-    console.log('You did it!')
+    // console.log('You did it!')
+    if (i === 4) {
+        console.log('no longer click')
+        return;
+    }
     i++
-    displayQuestions()
-    displayAnswers()
+    console.log(i)
+    if (i < 4) {
+        displayQuestions()
+        displayAnswers()
+    } else if (i === 4) {
+        console.log('this works!')
+        let winMessage = document.createElement('p')
+        winMessage.innerText = 'game over'
+        document.body.append(winMessage)
+    }
+    // displayQuestions()
+    // displayAnswers()
  };
 
 
 function displayQuestions() {
     questionElement[0].innerText = inventory[i].question
-    //questionElement[i] = inventory[i % inventory.length];
-    // ends game logic
 };
 
 
@@ -88,10 +98,9 @@ function answerCorrect(e) {
         answerButton[k].removeEventListener('click', answerCorrect)
         const theAnswer = inventory[i].answers[k].choice
         const yourAnswer = e.target.innerText
-        console.log(inventory[i].answers[k].correct)
-        console.log(yourAnswer)
+        // console.log(inventory[i].answers[k].correct)
+        // console.log(yourAnswer)
         if (inventory[i].answers[k].correct === true && (theAnswer === yourAnswer)) {
-
             correct = true
         }
     }
@@ -101,40 +110,6 @@ function answerCorrect(e) {
         console.log('try again')
     }
 };
-
-
-
-
-
-
-
-// answerButton.forEach(function (m) {
-//     m.addEventListener('click', function () {
-//         console.log(m);
-//     });
-// });
-
-
-// for (let m = 0; m < 4; m++) {
-//     answerButton[m].addEventListener('click', correctAnswer() {
-//         function correctAnswer () {
-//             console.log('clicked!')
-//         }
-//     })
-// };
-
-
-// function answersCorrect() {
-//     for (let m = 0; m < 4; m++) {
-//         console.log('answer clicked!')
-//     }
-//     // if (inventory[i++].answers[j++].correct === true) {
-//     //     console.log('genius!')
-//     // }
-// };
-
-
-
 
 
 
