@@ -1,4 +1,4 @@
-# Ryan's Hot Takes Trivia Game??
+# Ryan's Hot Takes Trivia Game
 
 ### Created by: Ryan Hirsch  
 
