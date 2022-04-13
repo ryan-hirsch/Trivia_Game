@@ -10,13 +10,18 @@ This project is a browser game created by Ryan Hirsch for their 2022 General Ass
 The browser game is a trivia game with random questions and the goal is to answer as many correct questions as possible.  
 <p>&nbsp;</p>
 
-## IMAGES
+## WIREFRAMES
+![Wireframe](Images/Wireframe.png)
+<p>&nbsp;<p>
+
+## GAME IMAGES
 ![Start Game](Images/StartGame.png)
 ![Middle Game](Images/MiddleGame.png)
 ![End Game](Images/EndGame.png)
 <p>&nbsp;</p>
 
 ## USER STORIES:
+[Trivia Game](https://ryan-hirsch.github.io/Trivia_Game/)
 - Player starts on a page with a loaded question and four options for correct answers under it
 - The player will then read each question presented on the page
 - Next, the player will read each answer choice given below the question
