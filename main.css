@@ -1,13 +1,27 @@
+body {
+    background-color: #94A1DB;
+    font-family: 'Poppins', sans-serif;
+    text-align: center;
+}
+
 h1 {
-    font-family: 'Anonymous Pro', monospace;
     color: #232C33;
     text-align: center;
 };
 
 
-.answer-button {
-    font-family: 'Poppins', sans-serif;
-    color: #232C33;
-    font-size: 28px;
+.question {
     text-align: center;
+    font-size: 42px;
+    color: #232C33;
+}
+
+
+ .answer-button, .next-button {
+    color: #232C33;
+    font-size: 14pxpx;
+    text-align: center;
+    background-color: #DCD6F7;
+    padding: 15px;
+    border-radius: 20px;
 };

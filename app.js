@@ -1,38 +1,38 @@
 const inventory = [
     {
-        question: 'What is 1 + 1?',
+        question: 'Rocks:',
         answers: [
-            {choice: '2', correct: true},
-            {choice: '3', correct: false},
-            {choice: '5', correct: false},
-            {choice: '4', correct: false}
+            {choice: 'are soft until you touch them', correct: false},
+            {choice: 'move like water until you look at them', correct: false},
+            {choice: 'are fake', correct: false},
+            {choice: 'all of the above', correct: true}
         ]
     },
     {
-        question: 'What is 3 + 5?',
+        question: 'Cupcakes without icing are just muffins',
         answers: [
-            {choice: '2', correct: false},
-            {choice: '7', correct: false},
-            {choice: '8', correct: true},
-            {choice: '-2', correct: false}
+            {choice: 'Icing is the bane of my existence', correct: true},
+            {choice: 'True', correct: false},
+            {choice: 'There is only one right answer and it is the first option', correct: false},
+            {choice: 'If you picked "true", you are wrong', correct: false}
         ]
     },
     {
-        question: 'What is 3 + 1?',
+        question: 'Crystals have healing powers',
         answers: [
-            {choice: '6', correct: false},
-            {choice: '4', correct: true},
-            {choice: '2', correct: false},
-            {choice: '5', correct: false}
+            {choice: 'No.', correct: true},
+            {choice: 'Crystal gays have the same energy as IPA heteros', correct: true},
+            {choice: 'All quartz is SiO2. Trace minerals dont make a difference', correct: true},
+            {choice: 'Again, no.', correct: true}
         ]
     },
     {
-        question: 'What is 2 * 6?',
+        question: 'What is the only number that does not have its roman numeral?',
         answers: [
-            {choice: '-4', correct: false},
-            {choice: '8', correct: false},
-            {choice: '4', correct: false},
-            {choice: '12', correct: true}
+            {choice: '73', correct: false},
+            {choice: '21', correct: false},
+            {choice: '100,010,200', correct: false},
+            {choice: '0 -- this is the right answer. Fun fact: 0 didnt always exist. When counting first started coming around, you just had no quantity of something in which why mention, one of something, or many of something', correct: true}
         ]
     }
 ];
@@ -97,9 +97,13 @@ function answerCorrect(e) {
         }
     }
     if (correct === true) {
-        console.log('genius!')
+        let rightAnswer = document.createElement('p')
+        rightAnswer.innerText = 'Correct!'
+        document.body.append(rightAnswer)
     } else {
-        console.log('try again')
+        let wrongAnswer = document.createElement('p')
+        wrongAnswer.innerText = 'Sorry, try next question'
+        document.body.append(wrongAnswer)
     }
 };
 
