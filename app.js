@@ -27,7 +27,7 @@ const inventory = [
         ]
     },
     {
-        question: 'What is the only number that does not have its roman numeral?',
+        question: 'What is the only number that does not have its own roman numeral?',
         answers: [
             {choice: '73', correct: false},
             {choice: '21', correct: false},
