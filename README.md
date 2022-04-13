@@ -1,8 +1,7 @@
-# COULD IT BE MORE TRIVIAL??
+# Ryan's Hot Takes Trivia Game??
 
 ### Created by: Ryan Hirsch  
 
-<p>&nbsp;</p>
 <p>&nbsp;</p>
 
 ## OVERVIEW
