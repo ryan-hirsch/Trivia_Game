@@ -52,24 +52,18 @@ let i = -1
 
 
 function nextClicked() {
-    // console.log('You did it!')
     if (i === 4) {
-        console.log('no longer click')
         return;
     }
     i++
-    console.log(i)
     if (i < 4) {
         displayQuestions()
         displayAnswers()
     } else if (i === 4) {
-        console.log('this works!')
         let winMessage = document.createElement('p')
         winMessage.innerText = 'game over'
         document.body.append(winMessage)
     }
-    // displayQuestions()
-    // displayAnswers()
  };
 
 
@@ -98,8 +92,6 @@ function answerCorrect(e) {
         answerButton[k].removeEventListener('click', answerCorrect)
         const theAnswer = inventory[i].answers[k].choice
         const yourAnswer = e.target.innerText
-        // console.log(inventory[i].answers[k].correct)
-        // console.log(yourAnswer)
         if (inventory[i].answers[k].correct === true && (theAnswer === yourAnswer)) {
             correct = true
         }
