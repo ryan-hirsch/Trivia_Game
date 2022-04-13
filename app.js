@@ -21,8 +21,8 @@ const inventory = [
         question: 'Crystals have healing powers',
         answers: [
             {choice: 'No.', correct: true},
-            {choice: 'Crystal gays have the same energy as IPA heteros', correct: true},
-            {choice: 'All quartz is SiO2. Trace minerals dont make a difference', correct: true},
+            {choice: 'Absolutely not.', correct: true},
+            {choice: 'All quartz is SiO2. Trace chemicals dont make a difference', correct: true},
             {choice: 'Again, no.', correct: true}
         ]
     },
