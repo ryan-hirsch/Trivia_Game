@@ -19,6 +19,12 @@ The browser game is a trivia game with random questions and the goal is to answe
 ![End Game](Images/EndGame.png)
 <p>&nbsp;</p>
 
+## CODE SNIPPETS
+![Basic HTML](Images/Trivia_HTML.png)
+![Basic CSS](Images/Trivia_CSS.png)
+![Basic JavaScript](Images/Trivia_JS.png)
+<p>&nbsp;</p>
+
 ## USER STORIES:
 [Trivia Game](https://ryan-hirsch.github.io/Trivia_Game/)
 - Player starts on a page with a loaded question and four options for correct answers under it
